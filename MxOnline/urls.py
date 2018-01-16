@@ -18,6 +18,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.views.generic import TemplateView
+from users.views import loginView
 import xadmin
 # from users.views import LogoutView, LoginView, RegisterView, AciveUserView, ForgetPwdView, ResetView, ModifyPwdView
 # from users.views import LoginView
@@ -30,5 +31,5 @@ urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
     url('^$', TemplateView.as_view(template_name="index.html")),
     # url('^login/$', TemplateView.as_view(template_name="login.html"), name='login')
-    url('^login/$', login, name="login")
+    url('^login/$', loginView.as_view(), name="login")
 ]
