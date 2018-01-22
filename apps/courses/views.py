@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from  django.db.models import Q
 from .models import Course, CourseResource
 from operation.models import UserFavorite, CourseComments, UserCourse
-from utils.mixin_utils import LoginRequireMixin
+from utils.mixin_utils import LoginRequiredMixin
 
 # Create your views here.
 
@@ -77,7 +77,7 @@ class CourseDetailView(View):
                 "has_fav_org":has_fav_org,
             })
 
-class CourseInfoView(LoginRequireMixin, View):
+class CourseInfoView(LoginRequiredMixin, View):
     """
     课程章节信息
     """
@@ -105,7 +105,7 @@ class CourseInfoView(LoginRequireMixin, View):
             "relate_courses":relate_courses,
         })
 
-class CommentsView(LoginRequireMixin, View):
+class CommentsView(LoginRequiredMixin, View):
     def get(self, request, course_id):
         course = Course.objects.get(id=int(course_id))
         all_resources = CourseResource.objects.filter(cours=course)

@@ -150,3 +150,7 @@ EMAIL_HOST_USER = "xiaodai_ft@163.com"
 EMAIL_HOST_PASSWORD = "dft123"
 EMAIL_USE_TLS= False
 EMAIL_FROM = "xiaodai_ft@163.com"
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

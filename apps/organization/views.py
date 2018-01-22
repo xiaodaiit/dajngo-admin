@@ -9,7 +9,7 @@ from .models import CourseOrg, CityDict, Teacher
 from .forms import UserAskForm
 from operation.models import UserFavorite
 from courses.models import Course
-from utils.mixin_utils import LoginRequireMixin
+from utils.mixin_utils import LoginRequiredMixin
 
 # Create your views here.
 

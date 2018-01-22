@@ -72,13 +72,13 @@
 						<div class="module1_2 box">
 							<div class="imgslide2">
 								<ul class="imgs">
-{#                                    {% for banner_course in banner_courses %}#}
-{#                                    <li>#}
-{#                                        <a href="{% url 'course:course_detail' banner_course.id %}">#}
-{#                                            <img width="470" height="300" src="{{ MEDIA_URL }}{{ banner_course.image }}" />#}
-{#                                        </a>#}
-{#                                    </li>#}
-{#                                    {% endfor %}#}
+                                    {% for banner_course in banner_courses %}
+                                    <li>
+                                        <a href="{% url 'course:course_detail' banner_course.id %}">
+                                            <img width="470" height="300" src="{{ MEDIA_URL }}{{ banner_course.image }}" />
+                                        </a>
+                                    </li>
+                                    {% endfor %}
 								</ul>
 							</div>
 							<div class="unslider-arrow2 prev"></div>
